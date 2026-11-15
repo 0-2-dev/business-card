@@ -4,51 +4,93 @@
         <link rel="stylesheet" href="styles.css">        
     </head>
     <body>
-        <div class="main">
-<!--0dev-->
+    <!--0dev-->
             <div class="card">
-                <img class="avatar" src="./images/avatars/0dev.png" alt="Pixel art avater of 0dev smiling">
-            <div class="txt-box">
-            <div class="txt-heading">
-                 <h3>0dev (me)</h3>
-            </div>
-            <div class="txt-body">
-                 <h5>Student (teacher)</h5>
-                 <p>Learning <br>from scratch</p>
-            </div>
-            <div class="icon">
-                <a href="https://www.instagram.com/0_2_dev?vrfl=MW16ejhrNTJiNm13Zw=="><img src="./images/icons/instagram.png" class="socials"></a>
-                <a href="https://youtube.com/@0_2_dev?si=YtXOmoIwo028xqcW"><img src="./images/icons/youtube.png" class="socials"></a>
-                <a href="https://www.tiktok.com/@0_2_dev?_r=1&_t=ZS-9BOYmgc5TVd"><img src="./images/icons/tiktok-circle.png" class="socials"></a>
-            </div>
-            </div>
-            </div>
-    <!--Per-->
-            <div class="card">
-                <img class="avatar" src="./images/avatars/per.png" alt="Pixel art avater of Per Borgen smiling">
-            <div class="txt-box">
-            <div class="txt-heading">
-                 <h3>Per Borgen</h3>
-            </div>
-            <div class="txt-body">
-                 <h5>Scrimba Teacher</h5>
-                 <p>HTML + CSS</p>
-            </div>
-            <div class="icon">
-                <a href="https://www.linkedin.com/in/perborgen/"><img src="./images/icons/linkedin.png" class="socials"></a>
-                <a href="https://x.com/perborgen?lang=en"><img src="./images/icons/twitter.png" class="socials"></a>
-            </div>
-            </div>
-            </div>
-        </div>
+                <div class ="img-box">
 
+                    <div>
+                        <img class="avatar" src="./images/avatars/0dev.png" alt="Pixel art avater of 0dev smiling">
+                    </div>
+
+                    <div class="socials">
+                        <a href="https://www.instagram.com/0_2_dev?vrfl=MW16ejhrNTJiNm13Zw=="><img src="./images/icons/socials/insta.png" class="socials"></a>
+                        <a href="https://youtube.com/@0_2_dev?si=YtXOmoIwo028xqcW"><img src="./images/icons/socials/youtube.png" class="socials"></a>
+                        <a href="https://www.tiktok.com/@0_2_dev?_r=1&_t=ZS-9BOYmgc5TVd"><img src="./images/icons/socials/tiktok.png" class="socials"></a>
+                    </div>   
+
+                </div>             
+
+                <div class="txt-box">
+
+                    <div class="txt-heading">
+                        <h3>0dev (me)</h3>
+                    </div>
+
+                    <div class="txt-body">
+                        <p>The main character of the channel.
+                        Going from 0 to full stack dev in 100 days.</p>
+                    </div>
+                    
+                </div>
+
+            </div>  
+
+    <!--0dev-->
+            <div class="card">
+                <div class ="img-box">
+
+                    <div>
+                        <img class="avatar" src="./images/avatars/per.png" alt="Pixel art avater of Per Borgen smiling">
+                    </div>
+
+                    <div class="socials">
+                        <a href="https://www.instagram.com/perborgen/"><img src="./images/icons/socials/insta.png" class="socials"></a>
+                        <a href="https://www.youtube.com/channel/UCNW7HDseZb6N3nKUEP6uLag"><img src="./images/icons/socials/youtube.png" class="socials"></a>
+                    </div>   
+
+                </div>             
+
+                <div class="txt-box">
+
+                    <div class="txt-heading">
+                        <h3>Per Borgen</h3>
+                    </div>
+
+                    <div class="txt-body">
+                        <p>The main teacher on Scrimba up to this point
+                            (HTML + CSS).</p>
+                    </div>
+                    
+                </div>
+
+            </div>  
+
+<!-- Nav-bar-->
             <div class="bottom">
+
                 <button>
-                <img class="icon" src="./images/icons/home.png" alt ="icon1">
+                    <img class="icon" src="./images/icons/home.png" alt ="icon1">
                 </button>
+
                 <button>
-                <img class="icon" src="./images/icons/menu-burger.png" alt ="icon3">
+                    <img class="icon" src="./images/icons/menu-burger.png" alt ="icon3">
                 </button>
+
             </div>
+
+<script>
+  document.querySelectorAll('.avatar').forEach(img => {
+    img.addEventListener('click', () => {
+      img.classList.remove('is-wiggling');
+      void img.offsetWidth;
+      img.classList.add('is-wiggling');
+    });
+
+    img.addEventListener('animationend', () => {
+      img.classList.remove('is-wiggling');
+    });
+  });
+</script>
+
     </body>
 </html>
