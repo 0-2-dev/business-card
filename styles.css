@@ -1,3 +1,6 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 /*Variables*/
 :root{
     --chartreuse: #c7ff03;
@@ -9,16 +12,21 @@
     --sec-color: var(--jungle-teal);
     --pop-color: var(--evergreen);
     --text-color: var(--ghost-white);
+    --accent-color: var(--chartreuse);
 }
 
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
+    margin: 0;
+    font-family: "Fira sans", sans-serif;
+    padding-bottom: 70px;
 }
 
 /*Card*/
 .card {
     width: 90%;
+    max-width: 450px;
     margin: 20px auto;
     padding: 10px;
     display: flex;
@@ -30,6 +38,7 @@ body{
     border-right: 2px solid color-mix(in srgb, var(--pop-color), white 25%);
     border-radius: 25px;
     box-shadow: 1px 1px 1px rgb(64, 63, 63);
+    gap: 12px;
 }
 
 .card-heading{
@@ -39,7 +48,6 @@ body{
     background-color: var(--sec-color);
     color: var(--text-color);
     box-shadow: 1px 1px 1px rgb(64, 63, 63);
-    margin-bottom: 10px;
     align-items: center;
     justify-content: space-around;
 }
@@ -51,8 +59,8 @@ body{
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
-    border-radius: 50px;
-    border: 1px solid  var(--chartreuse);
+    border-radius: 50%;
+    border: 1px solid  var(--accent-color);
     vertical-align: middle;
     margin: 10px 20px;
 }
@@ -70,45 +78,30 @@ body{
 }
 
 .txt-heading{
-    width: 60%;
-    margin: 0px 30px;
+    flex: 1;
     text-align: center;
-    vertical-align: middle;
 }
 
 .card-content{
     display: flex;
     width: auto;
     flex: 1;
-    width: 100%;
-}
-
-.txt-body{
-    width: auto;
-    flex: 1;
-    border-radius: 20px;
     border-radius: 20px;
     padding: 20px 30px;
     background-color: var(--sec-color);
     color: var(--text-color);
     text-align: center;
     box-shadow: 1px 1px 1px rgb(64, 63, 63);
+    flex-direction: column;
 }
 
-.txt-box{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
 
 .socials-wrap{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 16px;
 }
-.socials{
-    height: 25px;
-    margin-top: 10px;
-}
+
 
 /*Navigation*/
 .bottom{
@@ -134,15 +127,10 @@ body{
 }
 
 button{
-    height: 5px;
     background-color: transparent;
     width: 100%;
     height: 100%;
-    border-right: 1px solid color-mix(in srgb, var(--pop-color), black 25%);
-    border-left: 0px dotted transparent;
-    border-top: 0px dotted transparent;
-    border-bottom: 0px dotted transparent;
-
+    border: none;
 }
 
 /* Fonts */
